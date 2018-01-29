@@ -1,0 +1,60 @@
+<h1 id="data-schema-design">Data Schema Design</h1>
+<hr />
+<h2 id="requirements">Requirements</h2>
+<p>Visualize your data design with schema before you use a database.</p>
+<h3 id="input">Input</h3>
+<ul>
+<li>Your desired data source you want to build and use</li>
+</ul>
+<h3 id="process">Process</h3>
+<ul>
+<li>Designing the schema of your data source</li>
+</ul>
+<h3 id="output">Output</h3>
+<ul>
+<li>Prepared data schema design</li>
+</ul>
+<hr />
+<h2 id="level-0">Level 0</h2>
+<ul>
+<li>Think about a data source you want to build</li>
+<li>For example: list of foods, drinks, users, players, animals, places, etc</li>
+<li>Sketch about the important properties for a schema about that data source</li>
+<li>Type in your plan in a documentation like README</li>
+</ul>
+<h3 id="example">Example</h3>
+<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">list of animals
+
+* <span class="fl">name: Affen / Vark / Hound</span>
+<span class="fl">* race: Cat / Dog / Mouse / Bird</span>
+<span class="fl">* color: Black / White / Gray / Brown</span>
+<span class="fl">* diet: Carnivore / Herbivore / Omnivore</span>
+<span class="fl">* legs: 2 / 4</span></code></pre></div>
+<hr />
+<h2 id="level-1">Level 1</h2>
+<ul>
+<li>Transform that schema into an actual data sample</li>
+</ul>
+<h3 id="example-1">Example</h3>
+<pre class="js"><code>[
+  {
+    name: &quot;Hound&quot;,
+    race: &quot;Dog&quot;,
+    color: &quot;Black&quot;,
+    diet: &quot;Carnivore&quot;,
+    legs: 4
+  },
+  ...
+]</code></pre>
+<hr />
+<h2 id="level-2">Level 2</h2>
+<ul>
+<li>Standardize that data sample into a schema with data types</li>
+</ul>
+<pre class="js"><code>AnimalSchema = {
+  name: String,
+  race: String,
+  color: String,
+  diet: String,
+  legs: Number
+}</code></pre>
